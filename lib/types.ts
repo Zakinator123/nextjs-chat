@@ -1,4 +1,4 @@
-import { type Message } from 'ai'
+import {Message} from "@/ai-sdk/packages/core/shared/types";
 
 export interface Chat extends Record<string, any> {
   id: string

@@ -231,8 +231,11 @@ export function useChat({
           }
 
           if (onFinish) {
+            // @ts-ignore
             onFinish(responseMessage);
           }
+          // @ts-ignore
+          return responseMessage;
         };
 
         let chatRequest = initialChatRequest;
@@ -257,7 +260,9 @@ export function useChat({
         }
 
         abortControllerRef.current = null;
-        // return result;
+
+        // TODO: I have no idea what needs to be returned here.
+        return messagesRef.current[messagesRef.current.length - 1].content ?? '';
       } catch (err) {
         // Ignore abort errors as they are expected.
         if ((err as any).name === 'AbortError') {

@@ -1,6 +1,6 @@
 'use client'
 
-import { type Message } from 'ai'
+import { type Message } from '@/ai-sdk/packages/core/react'
 
 import { Button } from '@/components/ui/button'
 import { IconCheck, IconCopy } from '@/components/ui/icons'
@@ -29,7 +29,7 @@ export function ChatMessageActions({
       <Button
         variant="ghost"
         size="icon"
-        onClick={() => copyToClipboard(message.content)}
+        onClick={() => copyToClipboard(message.content ?? '')}
       >
         {isCopied ? <IconCheck /> : <IconCopy />}
         <span className="sr-only">Copy message</span>

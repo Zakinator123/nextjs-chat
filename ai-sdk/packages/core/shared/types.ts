@@ -1,5 +1,5 @@
 import { ChatCompletionRequestMessageFunctionCall } from 'openai-edge';
-import { FunctionCallHandler, ParsedFunctionCall } from '../react';
+import { FunctionCallHandler} from '../react';
 
 /**
  * Shared types between the API and UI packages.
@@ -10,7 +10,7 @@ export type Message = {
   content?: string,
   name?: string,
   role: 'system' | 'user' | 'assistant' | 'function',
-  function_call?: string | ParsedFunctionCall,
+  function_call?: string | ChatCompletionRequestMessageFunctionCall,
 }
 
 export type CreateMessage = {

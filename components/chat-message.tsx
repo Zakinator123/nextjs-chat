@@ -1,4 +1,4 @@
-import { Message } from 'ai'
+import React from "react";
 import remarkGfm from 'remark-gfm'
 import remarkMath from 'remark-math'
 
@@ -7,6 +7,7 @@ import { CodeBlock } from '@/components/ui/codeblock'
 import { MemoizedReactMarkdown } from '@/components/markdown'
 import { IconOpenAI, IconUser } from '@/components/ui/icons'
 import { ChatMessageActions } from '@/components/chat-message-actions'
+import {Message} from "@/ai-sdk/packages/core/shared/types";
 
 export interface ChatMessageProps {
   message: Message
@@ -68,7 +69,7 @@ export function ChatMessage({ message, ...props }: ChatMessageProps) {
             }
           }}
         >
-          {message.content}
+          {message.content ?? ''}
         </MemoizedReactMarkdown>
         <ChatMessageActions message={message} />
       </div>
