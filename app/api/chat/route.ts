@@ -1,15 +1,15 @@
 import { kv } from '@vercel/kv'
-import { OpenAIStream, StreamingTextResponse } from 'ai'
 import { Configuration, OpenAIApi } from 'openai-edge'
 
 import { auth } from '@/auth'
 import { nanoid } from '@/lib/utils'
+import {OpenAIStream, StreamingTextResponse} from "@/ai-sdk/packages/core/streams";
 
 export const runtime = 'edge'
 
 export async function POST(req: Request) {
   const json = await req.json()
-  const { messages, previewToken } = json
+  const { messages, previewToken, functions, function_call } = json
   const session = await auth()
 
   if (process.env.VERCEL_ENV !== 'preview') {
@@ -24,12 +24,14 @@ export async function POST(req: Request) {
 
   const openai = new OpenAIApi(configuration)
 
+  // Ask OpenAI for a streaming chat completion given the prompt
   const res = await openai.createChatCompletion({
-    model: 'gpt-3.5-turbo',
+    model: 'gpt-3.5-turbo-0613',
+    stream: true,
     messages,
-    temperature: 0.7,
-    stream: true
-  })
+    functions,
+    function_call
+  });
 
   const stream = OpenAIStream(res, {
     async onCompletion(completion) {

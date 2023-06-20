@@ -1,4 +1,4 @@
-lockfileVersion: '6.0'
+lockfileVersion: '6.1'
 
 settings:
   autoInstallPeers: true
@@ -41,9 +41,6 @@ dependencies:
   '@vercel/og':
     specifier: ^0.5.7
     version: 0.5.7
-  ai:
-    specifier: ^2.1.2
-    version: 2.1.2(react@18.2.0)(svelte@3.59.2)(vue@3.3.4)
   body-scroll-lock:
     specifier: 4.0.0-beta.0
     version: 4.0.0-beta.0
@@ -53,12 +50,15 @@ dependencies:
   clsx:
     specifier: ^1.2.1
     version: 1.2.1
+  eventsource-parser:
+    specifier: 1.0.0
+    version: 1.0.0
   focus-trap-react:
     specifier: ^10.1.1
     version: 10.1.1(prop-types@15.8.1)(react-dom@18.2.0)(react@18.2.0)
   nanoid:
-    specifier: ^4.0.2
-    version: 4.0.2
+    specifier: ^3.3.6
+    version: 3.3.6
   next:
     specifier: 13.4.7-canary.1
     version: 13.4.7-canary.1(react-dom@18.2.0)(react@18.2.0)
@@ -69,8 +69,8 @@ dependencies:
     specifier: ^0.2.1
     version: 0.2.1(next@13.4.7-canary.1)(react-dom@18.2.0)(react@18.2.0)
   openai-edge:
-    specifier: ^0.5.1
-    version: 0.5.1
+    specifier: ^1.1.0
+    version: 1.1.0
   react:
     specifier: ^18.2.0
     version: 18.2.0
@@ -98,6 +98,15 @@ dependencies:
   remark-math:
     specifier: ^5.1.1
     version: 5.1.1
+  sswr:
+    specifier: ^1.10.0
+    version: 1.10.0(svelte@3.59.2)
+  swr:
+    specifier: 2.1.5
+    version: 2.1.5(react@18.2.0)
+  swrv:
+    specifier: 1.0.3
+    version: 1.0.3(vue@3.3.4)
 
 devDependencies:
   '@tailwindcss/typography':
@@ -1480,31 +1489,6 @@ packages:
     engines: {node: '>=0.4.0'}
     hasBin: true
     dev: true
-
-  /ai@2.1.2(react@18.2.0)(svelte@3.59.2)(vue@3.3.4):
-    resolution: {integrity: sha512-WhyGH95Pv/gpgVMQT5eCyKXJh7irozr+bmpJ94somfRYBcAN2U270ii/OOHzGLrPM3liTbBilGQL2Ds7/5sz9Q==}
-    engines: {node: '>=14.6'}
-    peerDependencies:
-      react: ^18.0.0
-      svelte: ^3.29.0
-      vue: ^3.3.4
-    peerDependenciesMeta:
-      react:
-        optional: true
-      svelte:
-        optional: true
-      vue:
-        optional: true
-    dependencies:
-      eventsource-parser: 1.0.0
-      nanoid: 3.3.6
-      react: 18.2.0
-      sswr: 1.10.0(svelte@3.59.2)
-      svelte: 3.59.2
-      swr: 2.1.5(react@18.2.0)
-      swrv: 1.0.3(vue@3.3.4)
-      vue: 3.3.4
-    dev: false
 
   /ajv@6.12.6:
     resolution: {integrity: sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==}
@@ -4132,12 +4116,6 @@ packages:
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
-  /nanoid@4.0.2:
-    resolution: {integrity: sha512-7ZtY5KTCNheRGfEFxnedV5zFiORN1+Y1N6zvPTnHQd8ENUvfaDBeuJDZb2bN/oXwXxu3qkTXDzy57W5vAmDTBw==}
-    engines: {node: ^14 || ^16 || >=18}
-    hasBin: true
-    dev: false
-
   /natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
     dev: true
@@ -4362,8 +4340,8 @@ packages:
       is-wsl: 2.2.0
     dev: true
 
-  /openai-edge@0.5.1:
-    resolution: {integrity: sha512-/Q/b9wkPKWIzcnsp2o0Of5QW/t4A0XLw+E7rjVSYR3gLVt+pWpFuWCgWPWUVS1UrrLJPvzmndwe1JMpfqLRJIQ==}
+  /openai-edge@1.1.0:
+    resolution: {integrity: sha512-VkXT7yhKjr1QlC/wIMuPW/s003cPHUtiNjt/kH+54iKDZZ7eiGMPuymhpSWJ/zVZfVz6+94okGd6rNuu7JRBDw==}
     engines: {node: '>=12'}
     dev: false
 
