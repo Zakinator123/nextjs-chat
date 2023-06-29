@@ -7,7 +7,7 @@ import { CodeBlock } from '@/components/ui/codeblock'
 import { MemoizedReactMarkdown } from '@/components/markdown'
 import {IconF, IconOpenAI, IconUser} from '@/components/ui/icons'
 import { ChatMessageActions } from '@/components/chat-message-actions'
-import {Message} from "@/ai-sdk/packages/core/shared/types";
+import {Message} from "ai";
 
 export interface ChatMessageProps {
   message: Message

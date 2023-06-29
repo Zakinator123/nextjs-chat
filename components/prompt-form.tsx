@@ -11,7 +11,7 @@ import {
   TooltipTrigger
 } from '@/components/ui/tooltip'
 import { IconArrowElbow, IconPlus } from '@/components/ui/icons'
-import {UseChatHelpers} from "@/ai-sdk/packages/core/react";
+import {UseChatHelpers} from "ai/react/dist";
 
 export interface PromptProps
   extends Pick<UseChatHelpers, 'input' | 'setInput'> {

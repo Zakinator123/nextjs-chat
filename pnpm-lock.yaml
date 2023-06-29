@@ -1,4 +1,4 @@
-lockfileVersion: '6.1'
+lockfileVersion: '6.0'
 
 settings:
   autoInstallPeers: true
@@ -41,6 +41,9 @@ dependencies:
   '@vercel/og':
     specifier: ^0.5.7
     version: 0.5.7
+  ai:
+    specifier: ^2.1.11
+    version: 2.1.11(react@18.2.0)(svelte@3.59.2)(vue@3.3.4)
   body-scroll-lock:
     specifier: 4.0.0-beta.0
     version: 4.0.0-beta.0
@@ -190,8 +193,8 @@ packages:
       preact-render-to-string: 5.2.3(preact@10.11.3)
     dev: false
 
-  /@auth/nextjs@0.0.0-manual.b53ca00b(next@13.4.7-canary.1)(react@18.2.0):
-    resolution: {integrity: sha512-g0XvlP+3MSXPX512K6Hu0mGOkb1QPCkXkaA0Zr9i+bmTEDU9TtYTTNmX2EyvLeTfmrEEU/CMS92aWTmiki1KVA==}
+  /@auth/nextjs@0.0.0-manual.179c08d4(next@13.4.7-canary.1)(react@18.2.0):
+    resolution: {integrity: sha512-HVuDgb6xlYLV5mHTGc0Pycg8BlwtcvjvS+54QXEbOBpA5tulzKxAH8QlCoKj5R9XHW9hP9DiCnvXyVV9x2N+jA==}
     peerDependencies:
       next: ^13.4.6
       react: ^18.2.0
@@ -1489,6 +1492,31 @@ packages:
     engines: {node: '>=0.4.0'}
     hasBin: true
     dev: true
+
+  /ai@2.1.11(react@18.2.0)(svelte@3.59.2)(vue@3.3.4):
+    resolution: {integrity: sha512-gzCGSND9kiu5Q0CN3YSwF9TeQKBbdGZPd5cHC+psrZh0lqjvYXMzzYRe1s2UmUlLLIjah/xAix60CB97L+6R6Q==}
+    engines: {node: '>=14.6'}
+    peerDependencies:
+      react: ^18.2.0
+      svelte: ^4.0.0
+      vue: ^3.3.4
+    peerDependenciesMeta:
+      react:
+        optional: true
+      svelte:
+        optional: true
+      vue:
+        optional: true
+    dependencies:
+      eventsource-parser: 1.0.0
+      nanoid: 3.3.6
+      react: 18.2.0
+      sswr: 1.10.0(svelte@3.59.2)
+      svelte: 3.59.2
+      swr: 2.1.5(react@18.2.0)
+      swrv: 1.0.3(vue@3.3.4)
+      vue: 3.3.4
+    dev: false
 
   /ajv@6.12.6:
     resolution: {integrity: sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==}
@@ -4131,7 +4159,7 @@ packages:
       nodemailer:
         optional: true
     dependencies:
-      '@auth/nextjs': 0.0.0-manual.b53ca00b(next@13.4.7-canary.1)(react@18.2.0)
+      '@auth/nextjs': 0.0.0-manual.179c08d4(next@13.4.7-canary.1)(react@18.2.0)
       next: 13.4.7-canary.1(react-dom@18.2.0)(react@18.2.0)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)

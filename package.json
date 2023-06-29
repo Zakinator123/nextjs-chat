@@ -26,13 +26,17 @@
     "@vercel/analytics": "^1.0.0",
     "@vercel/kv": "^0.2.1",
     "@vercel/og": "^0.5.7",
+    "ai": "^2.1.11",
     "body-scroll-lock": "4.0.0-beta.0",
     "class-variance-authority": "^0.4.0",
     "clsx": "^1.2.1",
+    "eventsource-parser": "1.0.0",
     "focus-trap-react": "^10.1.1",
+    "nanoid": "^3.3.6",
     "next": "13.4.7-canary.1",
     "next-auth": "0.0.0-manual.e65faa1c",
     "next-themes": "^0.2.1",
+    "openai-edge": "^1.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hot-toast": "^2.4.1",
@@ -42,13 +46,9 @@
     "react-textarea-autosize": "^8.4.1",
     "remark-gfm": "^3.0.1",
     "remark-math": "^5.1.1",
-
-    "openai-edge": "^1.1.0",
     "sswr": "^1.10.0",
-    "swrv": "1.0.3",
-    "eventsource-parser": "1.0.0",
-    "nanoid": "^3.3.6",
-    "swr": "2.1.5"
+    "swr": "2.1.5",
+    "swrv": "1.0.3"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.9",

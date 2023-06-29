@@ -1,7 +1,7 @@
 
 import { Separator } from '@/components/ui/separator'
 import { ChatMessage } from '@/components/chat-message'
-import {Message} from "@/ai-sdk/packages/core/shared/types";
+import {Message} from "ai";
 
 export interface ChatList {
   messages: Message[]

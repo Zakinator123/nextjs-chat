@@ -3,7 +3,7 @@ import { Configuration, OpenAIApi } from 'openai-edge'
 
 import { auth } from '@/auth'
 import { nanoid } from '@/lib/utils'
-import {OpenAIStream, StreamingTextResponse} from "@/ai-sdk/packages/core/streams";
+import {OpenAIStream, StreamingTextResponse} from "ai";
 
 export const runtime = 'edge'
 
@@ -17,7 +17,6 @@ export async function POST(req: Request) {
       return new Response('Unauthorized', { status: 401 })
     }
   }
-
   const configuration = new Configuration({
     apiKey: previewToken || process.env.OPENAI_API_KEY
   })
